@@ -1,0 +1,82 @@
+XP
+
+1.
+
+http://visualstudiogallery.msdn.microsoft.com/27077b70-9dad-4c64-adcf-c7cf6bc9970c
+
+http://visualstudiogallery.msdn.microsoft.com/27077b70-9dad-4c64-adcf-c7cf6bc9970c?localeName=ja
+
+download nuget.exe
+C:\>cd tools
+
+C:\tools>nuget install chocolatey
+Installing 'chocolatey 0.9.8.27'.
+Successfully installed 'chocolatey 0.9.8.27'.
+
+C:\tools>
+
+
+
+
+PS C:\> cd .\tools
+PS C:\tools> cd .\chocolatey.0.9.8.27
+PS C:\tools\chocolatey.0.9.8.27> cd .\tools
+PS C:\tools\chocolatey.0.9.8.27\tools> dir
+
+
+    ディレクトリ: C:\tools\chocolatey.0.9.8.27\tools
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+d----        2014/08/06      9:51            chocolateyInstall
+-a---        2014/08/06      9:51        527 chocolateyInstall.ps1
+-a---        2014/08/06      9:51       8814 chocolateysetup.psm1
+-a---        2014/08/06      9:51       1434 init.ps1
+
+
+PS C:\tools\chocolatey.0.9.8.27\tools> & 'chocolateyInstall.ps1'
+用語 'chocolateyInstall.ps1' は、コマンドレット、関数、スクリプト ファイル、ま
+たは操作可能なプログラムの名前として認識されません。名前が正しく記述されている
+ことを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試
+行してください。
+発生場所 行:1 文字:2
++ & <<<<  'chocolateyInstall.ps1'
+    + CategoryInfo          : ObjectNotFound: (chocolateyInstall.ps1:String) [
+   ]、CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: コマンド chocolateyInstall.ps1 は見つかりませんでしたが
+、現在の場所に存在はしています。Windows PowerShell は、既定では、現在の場所から
+コマンドを読み込みません。このコマンドを信頼する場合は、".\chocolateyInstall.ps
+" と入力してください。詳細については、"get-help about_Command_Precedence" を参照
+してください。
+PS C:\tools\chocolatey.0.9.8.27\tools> .\chocolateyInstall.ps1
+Creating ChocolateyInstall as an Environment variable (targeting 'Machine') and
+setting it to 'C:\Documents and Settings\All Users\Application Data\chocolatey'
+We are setting up the Chocolatey repository for NuGet packages that should be a
+ the machine level. Think executables/application packages, not library package
+.
+That is what Chocolatey NuGet goodness is for. The repository is set up at 'C:\
+ocuments and Settings\All Users\Application Data\chocolatey'.
+The packages themselves go to 'C:\Documents and Settings\All Users\Application
+ata\chocolatey\lib' (i.e. C:\Documents and Settings\All Users\Application Data\
+hocolatey\lib\yourPackageName).
+A shim file for the command line goes to 'C:\Documents and Settings\All Users\A
+plication Data\chocolatey\bin' and points to an executable in 'C:\Documents and
+Settings\All Users\Application Data\chocolatey\lib\yourPackageName'.
+
+Creating Chocolatey NuGet folders if they do not already exist.
+
+Copying the contents of 'C:\tools\chocolatey.0.9.8.27\tools\chocolateyInstall'
+o 'C:\Documents and Settings\All Users\Application Data\chocolatey'.
+PATH environment variable does not have C:\Documents and Settings\All Users\App
+ication Data\chocolatey\bin in it. Adding...
+Chocolatey is now ready.
+You can call chocolatey from anywhere, command line or powershell by typing cho
+o.
+Run choco /? for a list of functions.
+You may need to shut down and restart powershell and/or consoles first prior to
+using chocolatey.
+PS C:\tools\chocolatey.0.9.8.27\tools>
